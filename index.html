@@ -1,26 +1,150 @@
 <!DOCTYPE html> <!-- 문서타입 html5 -->
-<html> <!-- 시작태그 -->
-    <head> <!--머릿말-->
-        <title>이가연의 홈페이지</title>
+<html><!-- 시작태그 -->
+    <head><!--머릿말-->
+        <title>자유페이지</title>
         <meta charset="utf-8" />
         <!--utf-8=euc-kr -->
-        <meta name="keywords" content="웹퍼블리싱,계원,html,css"/> 
+        <meta name="keywordsco" content="웹퍼블리싱,계원,html,css"/> 
     </head>
     <body><!--본문-->
-        <a href="subindex.html">서브페이지</a>
+        <a href="sud.html">서브페이지</a>
         <a href="https://www.google.com">구글바로가기</a>
         <a href="https://cafe.naver.com/kwdmd">카페 바로가기</a>
         <a href="https://www.naver.com"target="_blank"title="naver">네이버바로가기</a>
         <img width="100px" height="100px"src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NOZd-PQzQyfBKRkRwXpjhZVAfcO43tPp-Q&usqp=CAU>
-        <img src="cat/rhdiddl.jpg" />
-        <image /> <!--독립형태그-->
-        
+        <img width="https://1drv.ms/i/s!AtgWUwLYhNjlv2o-08dbCF4HhjWL?e=YTDhqR"/>
+
+        <img/> <!--독립형태그-->
         <a href="https://www.naver.com" target="_blank">
-            <img width="100pX" src="image/rhdiddl.jpg"/>
+            <img width="100pX" scr="image/Deg_Breeds.jpg"/>
         </a>
 
     <태그 속성="값">내용</태그>
     <태그 속성="값"/>
+
+    <h1> 대한민국</h1>
+        <h2>서울특별시</h2>
+            <h3>영등포구</h3>
+        <h2>경기도</h2>
+            <h3>안양시</h3>
+            <h3>의왕시</h3>
+    <h1>미국</h1>
+    <h1>일본</h1>
+    <h1>중국</h1>
+
+    <p>문단은 한가지 주제를 가지고 있는 여러 문장으로 이루어진 단</p>
+
+    html에서는      띄어쓰기, <br /> 줄바꿈 무시
+    <hr />
+
+    <strong>강한 강조</strong> 
+    <em>강조</em>
+    <!--의미를 부여 ( 권장)-->
+
+    <b>굵은글씨</b>
+    <i>기울임꼴(이텔릭체)</i>
+    <!--모양을 부여 (비권장)-->
+
+    <ins>추가글</ins>
+    <del>삭제글</del>
+
+    <u>밑줄</u>
+    <strike>중간줄</strike>
+
+    윗첨자<sup> 윗쪽에 붙여서 부연설명</sup>
+    아랫첨자<sub>아랫쪽에 붙여서 부연설명</sub>
+
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <ol>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ol>
+    <dl>
+        <dt>용어</dt>
+        <dd>용어설명</dd>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markrup Language</dd>
+    </dl>
+    <style>
+        th,td{
+            border: solid 1px black;
+        }
+
+
+    </style><!--CSS-->
+    <!--테이블 만들기 , 도표만들기-->
+    <table summary="table기본" >
+        <caption> table기본형태 </caption>
+        <thead></thead>
+        <tr>
+                <th scope="col" rowspan="2">제목1</th> <!-- 제목 한칸 colum 열--> <!--한 줄씩 늘릴 수록 칸이 계속 늘어남-->
+                <th scope="col" rowspan="2">제목2</th>
+                <th scope="col">제목3 </th>
+        </tr>
+    <table>
+        <tr><!-- 한줄 row 행-->
+            <th rowspan="2">제목1</th><!-- 내용 한칸 colum 열-->
+            <th colspan="2">제목2</th>
+            <th>제목3</th>
+            
+    </th>
+        <tr>
+            <td>내용1</td><!--내용 한칸-->
+            <td>내용2</td>
+            <td>내용3</td>
+        </tr>
+    </table>
+    
+    <tbody>
+    <!--표 본문-->
+    </tbody>
+    <tfoot>
+    <!--표끝-->
+    </tfoot>
+
+    <div> 블록형 구획 나눔</div>
+    <span> 인라인형 구획나눔</span>
+    <!-- 의미없이 사용하기 좋은 태그-->
+    
+
+    <form>
+        <input type="text" placeholder="기호없이 숫자만 입력해주세요"/>
+        <input type="text" value="123456"/>
+        <input type="password" />
+
+        <input type="radio" value="p1" checked/>카오루
+        <input type="radio" value="p2"/>오이카와
+        <input type="radio" value="p3"/>하울
+
+        <!--다른 선택지를 만들 때 , 이름을 달리 써줘야한다.  겹치치 않게. -->
+
+        <input type="checkbox" value="1" checked /> 남색
+        <input type="checkbox" value="2" /> 파랑
+        <input type="checkbox" value="3" /> 하늘
+
+        <hr />
+
+        <select>
+                <option>네이버</option>
+                <option>구글</option>
+                <option>계원</option>
+        </select>
+        <textarea rows="5" cols="60">여러줄의 장문을 작성</textarea>
+        <input onclick="alert(버튼눌림);"type="button" value="버튼입니다" >
+
+        <input type="button" value="버튼입니다"/>
+        <button>
+            <strong>
+                <ins>버튼입니다</ins>
+            </strong>
+        </button>
+        <input type="submit" value="제출">
+>    </form>
+
     </body>
 </html> <!--종료태그-->
-<image />
