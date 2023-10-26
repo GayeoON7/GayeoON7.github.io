@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css</title>
+        <meta charset="utf8">
+        <style>
+            body{color: red;}
+            #div1{ color:blue;}
+        </style>
+    </head>
+    <body>
+        <div id="div1">상속과 겹침</div>
+        <style type="text/css">
+            .cascade {color:green;}
+            #specifi {color:blue;}
+            /** css의 주석**/
+        </style>
+        <!--html의 주석 ( 주석의 형태가 서로 다름)-->
+        <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>
+
+        <style>
+            div{ background-color: lightblue;
+                border: solid 1px red;
+            }
+            #w1{
+                width:200px;
+                height:150px;
+                background-color: lightblue;
+            }
+        </style>
+        <div>default</div>
+        <div id="w1">width</div>
+
+        <style>
+            #p1{
+                padding : 20px;
+            }
+        </style>
+        <div id="p1">padding</div>
+
+        <style>
+            #m1{
+                margin: 20px;
+            }
+        </style>
+         <div id="m1">margin</div>
+
+         <style>
+        
+            { text-decoration: underline;}
+            strong {/* element selectior의 요소 선택자*/
+                color: green;
+            }
+            em{
+                color: pink;
+            }
+         </style>
+         <strong>strong</strong>
+         <em>em</em>
+         
+         <style>
+            .c1{
+                color: violet;
+            }
+            #d1{
+                color: yellowgreen;
+            }
+         </style>
+         <div class="c1">class selector</div>
+         <div id="d1">id selector</div>
+         <!--클래스 명이 없으면 c1에 해당이 안됌. 따라서 클래스명이 출력되지 않음-->
+
+         <style>
+            #f1::first-line{
+                color: blue;
+            }
+            #f1::first-letter{
+                font-size: 40px;
+            }
+            #f1::before{content:"시작";}
+            #f1::after{content:"끝";}
+            </style>
+            <div id="f1">
+             line,first letterirst line,first letterirst line,first letterirst line,first letter
+        irst line,first letterirst line,first letterirst line,first letterirst line,first letterirst line,first letter 
+        </div>
+        
+    </body>
+</html>
