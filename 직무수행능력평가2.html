@@ -46,10 +46,40 @@
                 font-size: 50px;
                 letter-spacing: 15px;
             }
+            #content1{
+                padding: 80px; /* 어바웃 쪽 안쪽 여백 주려고 함 */
+            }
+            #content1 ul{
+                display: flex; /* 글씨 가로로 세워놓는거  */
+                list-style: none;
+                padding: 0px; /* ul에 기본적으로 패딩이 있어서 밀려있는데 , 쏠리지 않기 위해 패딩을 0px로 바꿔줘야함 */
+                justify-content: stretch; /* 점 없애기 */
+                margin-top: 100px;
+            }
         </style>
+        
+        <body>
+            <div id="wrap">
+                <header>
+                        <ul>
+                            <li>HOME</li>
+                            <li>ART</li>
+                            <li>SERVICES</li>
+                            <li>ARTICLE</li>
+                            <li>SHOPPING</li>
+                        </ul>
+                </header>
+         </body>       
             <div id="main_visual">
                 <p>“ The value of a work is eternal ”</p>
                 <h2>LA VERA BELLEZZA</h2>
                 <p>Art, and pint</p>
              </div>
+             <section id="content1">
+                <h3> ABOUT ME</h3>
+                    <p>
+                        “그림 보호와 행성 보호 중 뭐가 더 걱정인가”그림 손상 없고 액자만 훼손<br />
+                        이 단체는 “우리 활동가들이 그림 위에 수프 두 캔을 던지고 영국 정부가 새로운 석유와 가스 프로젝트를 중단할 것을 요구했다” <br /> 
+                    </p>
+            </section>
 </html>
