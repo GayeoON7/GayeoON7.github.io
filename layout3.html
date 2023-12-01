@@ -3,8 +3,76 @@
     <head>
         <title>layout3</title>
         <meta charset="usf-8"/>
+        <style>
+            body{
+                background-image: url("img_조각.png"); /*빈 공간에 반복되면서 배경을 채우려고 함 */
+            }
+            header h1{
+                font-size: 50px;
+            }
+            header ul{
+                display: flex;
+                list-style:none;
+                padding: 0px;
+                font-size: 12px;
+            }
+            header li{
+                padding: 0px;
+                padding-right: 20px;
+            }
+            .short_line{ /*클래스 명 앞에는 점을 붙여줘야 입력이 가능함*/
+                width: 30px;
+                border-top:solid 1px black ;
+            }
+            .long_line{
+
+            }
+            .category{
+                position: absolute; /* 위치지정 : 절대적인 */
+                /* top battom left right */
+                left:0px;
+                bottom:0px;
+                background-color: black;
+                color: white;
+            }
+            .content_card div:first-child{
+                position: relative;
+                /*relative 부모는 aㅠsolute 자식의 기준이 된다. */
+            }
+        </style>
     </head>
     <body>
-        
+        <div id="wrap">
+            <header>header
+                <h1> Gridly.</h1>
+                <div class="short_line"></div> <!--div 사이에 클래스명을 표기-->
+                <ul>
+                    <li>home</li>
+                    <li>digigns</li>
+                    <li>web digigns</li>
+                    <li>branding/identity</li>
+                </ul>
+            </header>
+            <div id="contain">
+            
+                <section class="content_card"> 
+                <div>
+                        <img src="img3_1.png">
+                        <div class="category">포토샵 / 디자인</div>
+                </div>       
+                <div>
+                    <h2>Dulux Color Awrds</h2>
+                    <div>2023.12.01</div>
+                    <div class="long_line"></div>
+                    <p>
+                        slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                    </p>
+                    <div class="iong_line"></div>
+                    <div>Read on</div>
+                </div>
+                </section>
+            </div>
+            <footer>footer</footer>
+        </div>
     </body>
 </html>
