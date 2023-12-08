@@ -3,17 +3,16 @@
     <head>
         <title>포트폴리오, 자유주제,이가연</title>
         <meta charset="utf-8"/>
-        <style>
-            h1{
-                text-align: center;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>전체 글씨 색상 변경 예제</title>
     </head>
- <body>
-        <div id="wrap"></div>
-        <h1>LA VERA BELLEZZA </h1>
-</body>
         <style>
+            header{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 50px;
+            }
             header ul{
                 list-style: none; 
                 display: flex; 
@@ -24,13 +23,10 @@
             header h1{
                 margin: 3px;
             }
-            header h1 span{
-                color: rgb(198,196,19);
-            }
             #main_visual{
                 background-image: url("imgswlran");
                 padding: 150px;
-                text-align: center;
+                text-align: ceter;
                 color: #bd0802;
                 background-size: 100px;
                 background-repeat: no-repeat;
@@ -56,6 +52,17 @@
                 justify-content: stretch; /* 점 없애기 */
                 margin-top: 100px;
             }
+            body {
+                color: #ffffff; 
+                font-family: Arial, sans-serif;
+                background-color: #000000;
+                margin: 0;
+                padding: 0;
+            }
+            .custom-text {
+                color: #000000; 
+                font-family: Arial, sans-serif; 
+            }
         </style>
         
         <body>
@@ -71,15 +78,32 @@
                 </header>
          </body>       
             <div id="main_visual">
-                <p>“ The value of a work is eternal ”</p>
+                <p>“ THE VALUE OF A WORK IS ETERNAL ”</p>
                 <h2>LA VERA BELLEZZA</h2>
                 <p>Art, and pint</p>
              </div>
              <section id="content1">
-                <h3> ABOUT ME</h3>
+                <h3> 예술의 가치는 영원하다. </h3>
                     <p>
                         “그림 보호와 행성 보호 중 뭐가 더 걱정인가”그림 손상 없고 액자만 훼손<br />
                         이 단체는 “우리 활동가들이 그림 위에 수프 두 캔을 던지고 영국 정부가 새로운 석유와 가스 프로젝트를 중단할 것을 요구했다” <br /> 
                     </p>
             </section>
+            
+            <section class="content_card"> 
+                <div>
+                        <img src="sunny.jpg">
+                </div>       
+                <div>
+                    <h2>고흐 [ 해바라기 ]</h2>
+                    <div>시민불복종인가, 눈살 찌푸리게 하는 행동에 불과한가</div>
+                    <div class="long_line"></div>
+                
+                    <div>지난해 빈센트 반 고흐 명화 ‘해바라기’에 토마토수프를 끼얹었던 영국 환경단체가 이번엔 스페인 궁정화가 디에고 벨라스케스 작품의 보호 유리를 깼다. <br/>
+                        석유와 가스 개발 계획을 발표할 예정인 영국 정부에 항의하는 차원에서다. 이 단체는 도로 위에 손을 접착제로 붙여 차량통행을 막거나 미술품을 훼손하는 방법 등으로<br/> 
+                        시위를 이어나가고 있다. 이들의 시위방식에 대해선 “시민의 관심을 환기시키기 위한 시민불복종 운동의 일환”이라는 이해와 “부적절한 행동”이라는 비판이 공존한다.</div>
+                </div>
+            </section>
 </html>
+
+<!-- 선 만들어서 메뉴 바 및 설명 글 만들기 , 푸터 , 글씨 색 바꾸기  */

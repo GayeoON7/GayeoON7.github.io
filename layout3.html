@@ -4,6 +4,11 @@
         <title>layout3</title>
         <meta charset="usf-8"/>
         <style>
+            #wrap{
+                min-width: 1000px;
+                min-width: 1920px;
+                margin: 0px auto;
+            }
             body{
                 background-image: url("img_조각.png"); /*빈 공간에 반복되면서 배경을 채우려고 함 */
             }
@@ -24,8 +29,18 @@
                 width: 30px;
                 border-top:solid 1px black ;
             }
-            .long_line{
-
+            #content{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .content_card{
+                width: 310px;
+                background-color: white;
+                box-shadow: 2px 2px 2px grey;
+                /* 가로위치 세로위치 번짐정도 그림자 색상을 순서대로 지정하여 만들 수 있다. */
+                margin: 20px;
             }
             .category{
                 position: absolute; /* 위치지정 : 절대적인 */
@@ -34,16 +49,45 @@
                 bottom:0px;
                 background-color: black;
                 color: white;
+                padding: 5px 15px; /* 내부여백을 늘린 명령어 */
             }
             .content_card div:first-child{
                 position: relative;
                 /*relative 부모는 aㅠsolute 자식의 기준이 된다. */
             }
+            .content_card img{ /* 원래 있던 공간의 알파벳을 카드 , 이미지를 네모 취급 해달라는 명령어 */
+                display: block;
+            }
+            .content_card>div:last-child{
+                padding: 20px; /* 위 아래 관계랑은 다르게 직속 자식 , 콘텐츠 카드 ( 밑에 박스 ) 만 해당함. */
+            }
+            .content_card h2{
+                margin-top: 0px;
+            }
+            .content_card>div>div:nth-child(2){
+                color: gray;
+            }
+            .long_line{
+                width: 250px;
+                border-top: dotted 1px gray;
+                margin:10px 0px;
+            }
+            .content_card p{
+                margin: 0px;
+            }
+            footer ul{
+                display: flex;
+                list-style: none; /* 하단 좌측의 점을 없애는 명령어 */
+                padding: 0px
+            }
+            footer li{
+                padding: 20px;
+            }
         </style>
     </head>
     <body>
         <div id="wrap">
-            <header>header
+            <header>
                 <h1> Gridly.</h1>
                 <div class="short_line"></div> <!--div 사이에 클래스명을 표기-->
                 <ul>
@@ -53,26 +97,217 @@
                     <li>branding/identity</li>
                 </ul>
             </header>
-            <div id="contain">
-            
+                <div id="content">
+                    <section class="content_card"> 
+                    <div>
+                            <img src="img3_1.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
                 <section class="content_card"> 
-                <div>
-                        <img src="img3_1.png">
-                        <div class="category">포토샵 / 디자인</div>
-                </div>       
-                <div>
-                    <h2>Dulux Color Awrds</h2>
-                    <div>2023.12.01</div>
-                    <div class="long_line"></div>
-                    <p>
-                        slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
-                    </p>
-                    <div class="iong_line"></div>
-                    <div>Read on</div>
-                </div>
+                    <div>
+                            <img src="img3_2.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="card3.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_4.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_5.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="card6.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_7.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_8.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_9.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_10.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
+                </section>
+                <section class="content_card"> 
+                    <div>
+                            <img src="img3_11.png">
+                            <div class="category">포토샵 / 디자인</div>
+                    </div>       
+                    <div>
+                        <h2>Dulux Color Awrds</h2>
+                        <div>2023.12.01</div>
+                        <div class="long_line"></div>
+                        <p>
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                            slkfsll kjldsfkjl jlkdsalkdlk dlkfdsld dlkjllk sjlkvdsl
+                        </p>
+                        <div class="long_line"></div>
+                        <div>Read on</div>
+                    </div>
                 </section>
             </div>
-            <footer>footer</footer>
+            <footer>
+                <div class="short_line"></div>
+                    <ul>
+                        <li><img src="icon3-1.png"></li>
+                        <li><img src="icon3-2.png"></li>
+                        <li><img src="icon3-3.png"></li>
+                        <li><img src="icon3-4.png"></li>
+                    </ul>
+                <div class="short_line"></div>
+                <p>salalsdljdsakjsaksfkefakjfefdsakjfdakjefdsaedsaknjedsaedsa</p>
+            </footer>
         </div>
     </body>
 </html>
